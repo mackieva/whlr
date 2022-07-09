@@ -13,10 +13,9 @@ function kreativ_front_page_init() {
 			wp_enqueue_style( 'loco-front-css', get_stylesheet_directory_uri() . '/css/locomotive-scroll.css' );
 			wp_enqueue_style( 'splide-front-css', get_stylesheet_directory_uri() . '/css/splide.min.css' );
 			wp_enqueue_style( 'whlr-front-css', get_stylesheet_directory_uri() . '/css/style-front.css' );
+			wp_enqueue_script( 'plax-js', 'https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js');
 			wp_enqueue_script( 'loco-js-home', get_stylesheet_directory_uri() . '/js/locomotive-scroll.min.js');
 			wp_enqueue_script( 'splide-js-home', get_stylesheet_directory_uri() . '/js/splide.min.js');
-			
-			//<script src='http://whlr.local/wp-content/themes/genesis-sample/js/js.js?ver=6.0' id='js-home-js'></script>
 		}
 
 		// Add front-page body class.
@@ -45,7 +44,7 @@ function kreativ_front_page_widgets() {
 			<div class="homeSection__ic homeSection__ic--right" data-scroll>
 				<div class="homeSection__icImg">
 					<div class="homeSection__icImgWrapper" data-scroll-call="dynamicBackground" data-scroll-repeat>
-						<div class="image" style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/240-W-Commonwealth-Blvd-Martinsville-VA-16.jpg);"></div>
+						<div class="image" style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
 						<div class="imagePlaceholder"></div>
 					</div>
 				</div>
@@ -74,19 +73,19 @@ function kreativ_front_page_widgets() {
 					<ul class="splide__list">
 						<li class="splide__slide">
 							<section class="homeSection" data-scroll-section>
-								<div class="homeSection__ic homeSection__ic--left" data-scroll>
+								<div class="homeSection__ic homeSection__ic--left" data-scroll data-scroll-speed="-8" data-scroll-position="top" data-scroll-repeat>
 									<div class="homeSection__icImg">
 										<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/240-W-Commonwealth-Blvd-Martinsville-VA-16.jpg);"></div>
+											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
 											<div class="imagePlaceholder"></div>
 										</div>
 									</div>
 									<div class="homeSection__icContent" data-scroll-sticky>
 										<p class="homeSection__isContentSubTitle">Featured Property</p>
-										<h3 class="homeSection__isContentTitle">Property Title</h3>
+										<h3 class="homeSection__isContentTitle">Village of Martinsville</h3>
 										<p class="homeSection__isContentText">WHLR is a real estate investment trust that owns a portfolio of grocery-anchored shopping centers in secondary and tertiary markets from Florida to Massachusetts, totaling over approximately eight million square feet.</p>
 										<div class="homeSection__isContentBtn">
-											<a href="#" class="btn--whlr pelement">View All Properties</a><a href="#" class="btn--whlr btn--whlrAlt pelement">View All Properties</a>
+											<a href="#" class="btn--whlr pelement">Leasing Application</a><a href="#" class="btn--whlr btn--whlrAlt pelement">Property Details</a>
 										</div>
 									</div>
 								</div>
@@ -97,16 +96,16 @@ function kreativ_front_page_widgets() {
 								<div class="homeSection__ic homeSection__ic--left" data-scroll>
 									<div class="homeSection__icImg">
 										<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/240-W-Commonwealth-Blvd-Martinsville-VA-16.jpg);"></div>
+											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
 											<div class="imagePlaceholder"></div>
 										</div>
 									</div>
 									<div class="homeSection__icContent" data-scroll-sticky>
 										<p class="homeSection__isContentSubTitle">Featured Property</p>
-										<h3 class="homeSection__isContentTitle">Property Title</h3>
-										<p class="homeSection__isContentText">WHLR is a real estate investment trust that owns a portfolio of grocery-anchored shopping centers in secondary and tertiary markets from Florida to Massachusetts, totaling over approximately eight million square feet.</p>
+										<h3 class="homeSection__isContentTitle">Ft. Howard Square</h3>
+										<p class="homeSection__isContentText">Located in one of Savannah's fastest growing submarkets, this fully-leased center is anchored by a number of large national tenants - Harbor Freight Tools, Goodwill, and Bealls Outlet.</p>
 										<div class="homeSection__isContentBtn">
-											<a href="#" class="btn--whlr pelement">View All Properties</a><a href="#" class="btn--whlr btn--whlrAlt pelement">View All Properties</a>
+											<a href="#" class="btn--whlr pelement">Leasing Application</a><a href="#" class="btn--whlr btn--whlrAlt pelement">Property Details</a>
 										</div>
 									</div>
 								</div>
@@ -117,56 +116,16 @@ function kreativ_front_page_widgets() {
 								<div class="homeSection__ic homeSection__ic--left" data-scroll>
 									<div class="homeSection__icImg">
 										<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/240-W-Commonwealth-Blvd-Martinsville-VA-16.jpg);"></div>
+											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
 											<div class="imagePlaceholder"></div>
 										</div>
 									</div>
 									<div class="homeSection__icContent" data-scroll-sticky>
 										<p class="homeSection__isContentSubTitle">Featured Property</p>
-										<h3 class="homeSection__isContentTitle">Property Title</h3>
-										<p class="homeSection__isContentText">WHLR is a real estate investment trust that owns a portfolio of grocery-anchored shopping centers in secondary and tertiary markets from Florida to Massachusetts, totaling over approximately eight million square feet.</p>
+										<h3 class="homeSection__isContentTitle">Franklin Village Shopping Center</h3>
+										<p class="homeSection__isContentText">As one of several fully leased centers in WHLR's portfolio, a 1/2 mile from Armstrong County Memorial Hospital, the area's largest employer.</p>
 										<div class="homeSection__isContentBtn">
-											<a href="#" class="btn--whlr pelement">View All Properties</a><a href="#" class="btn--whlr btn--whlrAlt pelement">View All Properties</a>
-										</div>
-									</div>
-								</div>
-							</section>
-						</li>
-						<li class="splide__slide">
-							<section class="homeSection" data-scroll-section>
-								<div class="homeSection__ic homeSection__ic--left" data-scroll>
-									<div class="homeSection__icImg">
-										<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/240-W-Commonwealth-Blvd-Martinsville-VA-16.jpg);"></div>
-											<div class="imagePlaceholder"></div>
-										</div>
-									</div>
-									<div class="homeSection__icContent">
-										<p class="homeSection__isContentSubTitle">Featured Property</p>
-										<h3 class="homeSection__isContentTitle">Property Title</h3>
-										<p class="homeSection__isContentText">WHLR is a real estate investment trust that owns a portfolio of grocery-anchored shopping centers in secondary and tertiary markets from Florida to Massachusetts, totaling over approximately eight million square feet.</p>
-										<div class="homeSection__isContentBtn">
-											<a href="#" class="btn--whlr pelement">View All Properties</a><a href="#" class="btn--whlr btn--whlrAlt pelement">View All Properties</a>
-										</div>
-									</div>
-								</div>
-							</section>
-						</li>
-						<li class="splide__slide">
-							<section class="homeSection" data-scroll-section>
-								<div class="homeSection__ic homeSection__ic--left" data-scroll>
-									<div class="homeSection__icImg">
-										<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/240-W-Commonwealth-Blvd-Martinsville-VA-16.jpg);"></div>
-											<div class="imagePlaceholder"></div>
-										</div>
-									</div>
-									<div class="homeSection__icContent">
-										<p class="homeSection__isContentSubTitle">Featured Property</p>
-										<h3 class="homeSection__isContentTitle">Property Title</h3>
-										<p class="homeSection__isContentText">WHLR is a real estate investment trust that owns a portfolio of grocery-anchored shopping centers in secondary and tertiary markets from Florida to Massachusetts, totaling over approximately eight million square feet.</p>
-										<div class="homeSection__isContentBtn">
-											<a href="#" class="btn--whlr pelement">View All Properties</a><a href="#" class="btn--whlr btn--whlrAlt pelement">View All Properties</a>
+											<a href="#" class="btn--whlr pelement">Leasing Application</a><a href="#" class="btn--whlr btn--whlrAlt pelement">Property Details</a>
 										</div>
 									</div>
 								</div>
@@ -179,14 +138,15 @@ function kreativ_front_page_widgets() {
 		</section>
 		<!-- EXPLORE REGION ACCORDION -->
 		<section class="homeSection" data-scroll-section>
-			<div class="homeSection__ic homeSection__ic--right" data-scroll>
+			<div class="homeSection__ic homeSection__ic--right" data-scroll  data-scroll-delay="4.5">
 				<div class="homeSection__icImg">
-					<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-						<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/240-W-Commonwealth-Blvd-Martinsville-VA-16.jpg);"></div>
+					<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat data-scroll-delay="4.5">
+						<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
 						<div class="imagePlaceholder"></div>
 					</div>
 				</div>
 				<div class="homeSection__icContent" data-scroll-sticky>
+					<p class="homeSection__isContentSubTitle">Eplore Regions</p>
 					<div class="accordion accordion-flush" id="accordionRegionExplore">
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="flush-headingOne">
@@ -235,19 +195,24 @@ function kreativ_front_page_widgets() {
 			</div>
 		</section>
 		<!-- METRICS -->
-		<section class="homeSection metrics" data-scroll-section>
-			<div class="wrap">
-				<div class="one-third first">
-					<p class="bodyLrgCopy">76</p>
+		<section class="homeSection metrics" data-scroll-section data-scroll-position="top">
+			<div class="row">
+				<div class="col-md-4" data-scroll data-scroll-speed="-20">
+					<p class="bodyXLrgCopy">76</p>
 					<p class="bodySubCopy">Shopping Centers</p>
 				</div>
-				<div class="one-third borders">
-					<p class="bodyLrgCopy">8 Million+</p>
+				<div class="col-md-4 borders" data-scroll data-scroll-speed="10">
+					<p class="bodyXLrgCopy">8 Million+</p>
 					<p class="bodySubCopy">Square Feet</p>
 				</div>
-				<div class="one-third">
-					<p class="bodyLrgCopy">14</p>
+				<div class="col-md-4" data-scroll data-scroll-speed="-5">
+					<p class="bodyXLrgCopy">14</p>
 					<p class="bodySubCopy">States</p>
+				</div>
+			</div>
+			<div class="row flex justify-content-center pt-5">
+				<div class="col-md-4">
+					<a href="#" class="btn--whlr">View Our Leasing Summary</a>
 				</div>
 			</div>
 		</section>
@@ -256,7 +221,7 @@ function kreativ_front_page_widgets() {
 			<div class="homeSection__ic homeSection__ic--left" data-scroll>
 				<div class="homeSection__icImg">
 					<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-						<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/240-W-Commonwealth-Blvd-Martinsville-VA-16.jpg);"></div>
+						<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
 						<div class="imagePlaceholder"></div>
 					</div>
 				</div>
@@ -272,22 +237,22 @@ function kreativ_front_page_widgets() {
 		</section>
 		<!-- PARTNERS -->
 		<section class="homeSection">
-			<h3 class="bodyLrgCopy text-center mb-3">Partners</h3>
+			<h3 class="bodyLrgCopy text-center mb-5">Partners</h3>
 			<div class="splide" id="splidePartners" role="group">
 				<div class="splide__track">
 					<ul class="splide__list">
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/big-lots.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/bjs.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/dollar-tree.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/food-lion.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/gabes.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/hobby-Lobby.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/kroger.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/lowes.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/marshalls.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/piggly-wiggly.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/planet-fitness.png" alt="" class="aligncenter"></li>
-						<li class="splide__slide"><img src="http://whlr.local/wp-content/uploads/winn-dixie.png" alt="" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/big-lots.png" alt="Big Lots" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/bjs.png" alt="BJs" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/dollar-tree.png" alt="Dollar Tree" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/food-lion.png" alt="Food Lion" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/gabes.png" alt="Gabes" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/hobby-Lobby.png" alt="Hobby Lobby" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/kroger.png" alt="Kroger" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/lowes.png" alt="Lowes" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/marshalls.png" alt="Marshalls" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/piggly-wiggly.png" alt="Piggly Wiggly" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/planet-fitness.png" alt="Planet Fitness" class="aligncenter"></li>
+						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/winn-dixie.png" alt="Winn Dixie" class="aligncenter"></li>
 					</ul>
 				</div>
 			</div>

@@ -120,17 +120,19 @@ html.has-scroll-smooth {
     transform:translateY(0)
 }
 .homeSection{
-    padding:100px 0;
-    margin-bottom:100px;
+    padding:90px 0;
     position:relative
 }
 
 @media (max-width:767px){
     .homeSection{
-        padding:30px 0 30px 0;
-        margin:150px 0 100px 0
+        padding:80px 0;
     }
 }
+
+.homeSection.homeSection--first {
+    padding-top: 50px;
+  }
 
 .homeSection__ic {
     position:relative;
@@ -322,7 +324,7 @@ transform-origin:100% 50% 0
     font-size:60px;
     margin-bottom:12px;
     opacity:0;
-    transform:translateY(15px);
+    transform:translateX(15px);
     transition:all .4s ease-in-out .6s;
     width:100%;
     margin-bottom:50px;
@@ -342,13 +344,13 @@ transform-origin:100% 50% 0
 }
 .is-inview .homeSection__isContentTitle{
     opacity:1;
-    transform:translateY(0)
+    transform:translateX(0)
 }
 .homeSection__isContentText{
     font-size: 18px;
     line-height: 27px;
     opacity:0;
-    transform:translateY(15px);
+    transform:translateX(15px);
     transition:all .4s ease-in-out .8s;
     max-width:450px;
     margin-bottom:20px;
@@ -357,17 +359,17 @@ transform-origin:100% 50% 0
 
 .is-inview .homeSection__isContentText{
     opacity:1;
-    transform:translateY(0)
+    transform:translateX(0)
 }
 .homeSection__isContentBtn{
     opacity:0;
-    transform:translateY(15px);
+    transform:translateX(15px);
     transition:all .4s ease-in-out .8s;
 }
 
 .is-inview .homeSection__isContentBtn{
     opacity:1;
-    transform:translateY(0)
+    transform:translateX(0)
 }
 
 .homeSection__ic .homeSection__isContentSubTitle {
@@ -573,14 +575,23 @@ transform-origin:100% 50% 0
 }
 
 .metrics .borders {
-    border-left: 1px solid #EBC307;
-    border-right: 1px solid #EBC307;
+    border-left: 3px solid #EBC307;
+    border-right: 3px solid #EBC307;
 }
 
 .bodyLrgCopy {
     font-family:'Oswald', sans-serif;
     color:#003471;
     font-size:60px;
+    line-height:100%;
+    margin-bottom:10px;
+    text-transform: uppercase;
+}
+
+.bodyXLrgCopy {
+    font-family:'Oswald', sans-serif;
+    color:#003471;
+    font-size:90px;
     line-height:100%;
     margin-bottom:10px;
     text-transform: uppercase;

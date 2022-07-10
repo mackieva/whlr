@@ -39,6 +39,8 @@ function kreativ_front_page_init() {
 function kreativ_front_page_widgets() {
 	?>
     <div class="homeSection__container" data-scroll-container>
+		<!-- <div class="cursor-dot"></div>
+		<div class="cursor-dot-outline"></div> -->
 		<!-- WHLR AN REIT -->
 		<section class="homeSection homeSection--first " data-scroll-section>
 			<div class="row">
@@ -52,7 +54,7 @@ function kreativ_front_page_widgets() {
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 homeSection__imgWrapper">
+				<div class="col-md-6 homeSection__imgWrapper" data-scroll>
 					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx homeSection__img">
 					<div class="imgPlaceholder"></div>
 				</div>
@@ -135,7 +137,7 @@ function kreativ_front_page_widgets() {
 			<div class="row">
 				<div class="col-md-6 d-flex justify-content-center align-items-center">
 					<div class="homeSection__icContent" data-scroll>
-						<p class="homeSection__isContentSubTitle">Eplore Regions</p>
+						<p class="homeSection__isContentSubTitle">Explore Regions</p>
 						<div class="accordion accordion-flush" id="accordionRegionExplore">
 							<div class="accordion-item">
 								<h2 class="accordion-header" id="flush-headingOne">
@@ -144,9 +146,15 @@ function kreativ_front_page_widgets() {
 								</button>
 								</h2>
 								<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="North East" data-bs-parent="#accordionRegionExplore">
-								<div class="accordion-body">
-									<a href="#" class="bth--whlr">Kentucky</a><a href="#" class="bth--whlr">Tennessee</a><a href="#" class="bth--whlr">North Carolina</a><a href="#" class="bth--whlr">Virginia</a><a href="#" class="bth--whlr">West Virginia</a>
-								</div>
+									<div class="accordion-body explore-region-body">
+										<div class="row">
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Maryland <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">New Jersey <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Pennsylvania <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Connecticut <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Massachusets <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item">
@@ -156,7 +164,15 @@ function kreativ_front_page_widgets() {
 								</button>
 								</h2>
 								<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="Mid-Atlantic" data-bs-parent="#accordionRegionExplore">
-								<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+									<div class="accordion-body explore-region-body">
+										<div class="row">
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Kentucky <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Tennessee <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">North Carolina <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Virginia <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">West Virginia <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item">
@@ -166,7 +182,14 @@ function kreativ_front_page_widgets() {
 								</button>
 								</h2>
 								<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="South East" data-bs-parent="#accordionRegionExplore">
-								<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+									<div class="accordion-body explore-region-body">
+										<div class="row">
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Alabama <i role="img" aria-label="Alabama" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Georgia <i role="img" aria-label="Georgia" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">North Carolina <i role="img" aria-label="North Carolina" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">South Carolina <i role="img" aria-label="South Carolina" class="bi-geo-alt-fill"></i></a></div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="accordion-item">
@@ -176,13 +199,17 @@ function kreativ_front_page_widgets() {
 								</button>
 								</h2>
 								<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="Mid-West" data-bs-parent="#accordionRegionExplore">
-								<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+									<div class="accordion-body explore-region-body">
+										<div class="row">
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Oklahoma <i role="img" aria-label="Oklahoma" class="bi-geo-alt-fill"></i></a></div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 homeSection__imgWrapper" data-scroll>
 					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx homeSection__img">
 					<div class="imgPlaceholder"></div>
 				</div>
@@ -190,21 +217,21 @@ function kreativ_front_page_widgets() {
 		</section>
 		<!-- METRICS -->
 		<section class="homeSection metrics" data-scroll-section>
-			<div class="row">
-				<div class="col-md-4" data-scroll data-scroll-speed="10" data-scroll-position="top" data-scroll-delay="0.05">
+			<div class="row" data-scroll>
+				<div class="col-md-4 firstStat">
 					<p class="bodyXLrgCopy">76</p>
 					<p class="bodySubCopy">Shopping Centers</p>
 				</div>
-				<div class="col-md-4 borders" data-scroll data-scroll-speed="6" data-scroll-position="top" data-scroll-delay="0.05">
+				<div class="col-md-4 borders secondStat">
 					<p class="bodyXLrgCopy">8 Million+</p>
 					<p class="bodySubCopy">Square Feet</p>
 				</div>
-				<div class="col-md-4" data-scroll data-scroll-speed="2" data-scroll-position="top" data-scroll-delay="0.05">
+				<div class="col-md-4 thirdStat">
 					<p class="bodyXLrgCopy">14</p>
 					<p class="bodySubCopy">States</p>
 				</div>
 			</div>
-			<div class="row flex justify-content-center pt-5">
+			<div class="row flex justify-content-center pt-5 statBtn">
 				<div class="col-md-4">
 					<a href="#" class="btn--whlr">View Our Leasing Summary</a>
 				</div>

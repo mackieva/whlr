@@ -4,7 +4,7 @@ let cursor = {
     _y: 0,
     endX: (window.innerWidth / 2),
     endY: (window.innerHeight / 2),
-    cursorVisible: true,
+    cursorVisible: false,
     cursorEnlarged: false,
     dot: document.querySelector('.cursor-dot'),
     $outline: document.querySelector('.cursor-dot-outline'),
@@ -103,8 +103,8 @@ let cursor = {
         var self = this;
         
         if (self.cursorEnlarged) {
-            self.dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            self.dot.style.transform = 'translate(-50%, -50%) scale(0)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(2.5)';
         } else {
             self.dot.style.transform = 'translate(-50%, -50%) scale(1)';
             self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';

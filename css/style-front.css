@@ -12,12 +12,12 @@
     bottom:0;
     left:calc(50% - 1px);
     height:70px;
-    color:#003471;
-    border-left:1px solid rgba(238,236,234,.2);
     white-space:nowrap;
+    text-decoration:none;
     text-transform:uppercase;
     line-height:70px;
-    color:#003471;
+    color:#0077FF;
+    letter-spacing:3px;
     z-index:5;
     transform:translateY(50%);
     transition:all .4s
@@ -292,7 +292,12 @@
     position:relative;
 }
 
-.splide .imgPlaceholder{
+.homeSection__imgWrapper {
+    position:relative;
+}
+
+.splide .imgPlaceholder,
+.homeSection__imgWrapper .imgPlaceholder {
     position:absolute;
     top:0;
     right:0;
@@ -302,7 +307,8 @@
     transition:width .6s ease
 }
 
-.splide .is-active .imgPlaceholder {
+.splide .is-active .imgPlaceholder,
+.homeSection__imgWrapper.is-inview .imgPlaceholder {
     width: 0;
 }
 
@@ -359,6 +365,35 @@
     }
 }
 
+/***** ACCORDION EXPLORE *******/
+
+.homeSection .accordion-button {
+    font-size: 50px;
+    color: rgb(189, 189, 189);
+    text-transform: uppercase;
+}
+
+.homeSection .accordion-button:hover,
+.homeSection .accordion-button:not(.collapsed) {
+    background:none;
+    color:#003471;
+}
+
+.homeSection .accordion-item {
+    border-bottom:1px solid #EBC307;
+}
+
+.homeSection .explore-region-body .btn--whlr {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.homeSection .explore-region-body .bi-geo-alt-fill {
+    color:#EBC307;
+}
+
+/***** METRICS*******/
+
 .metrics {
     text-align: center;
 }
@@ -394,4 +429,33 @@
     font-size:20px;
     line-height:100%;
     margin:0;
+}
+
+.metrics .firstStat,
+.metrics .secondStat,
+.metrics .thirdStat,
+.metrics .statBtn {
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.metrics .firstStat {
+    transition: all .4s ease-in-out .2s;
+}
+.metrics .secondStat {
+    transition: all .4s ease-in-out .4s;
+}
+.metrics .thirdStat {
+    transition: all .4s ease-in-out .6s;
+}
+.metrics .statBtn {
+    transition: all .4s ease-in-out .8s;
+}
+
+.metrics .is-inview .firstStat,
+.metrics .is-inview .secondStat,
+.metrics .is-inview .thirdStat,
+.metrics .is-inview .statBtn {
+    opacity:1;
+    transform:translateY(0)
 }

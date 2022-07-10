@@ -1,6 +1,6 @@
 
-        let cursor = document.querySelector('.cursor'),
-        follower = document.querySelector('.cursor-follower');
+        let cursor = document.querySelector('.cursors'),
+        follower = document.querySelector('.cursor-followers');
 
         let posX = 0,
             posY = 0;
@@ -35,11 +35,11 @@
             mouseY = e.clientY;
         });
 
-        $(".link").on("mouseenter", function() {
+        $(".pelement").on("mouseenter", function() {
             cursor.addClass("active");
             follower.addClass("active");
         });
-        $(".link").on("mouseleave", function() {
+        $(".pelement").on("mouseleave", function() {
             cursor.removeClass("active");
             follower.removeClass("active");
         });

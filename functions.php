@@ -269,3 +269,21 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+
+//Schedule Above Footer
+add_action('genesis_before', 'barba_open');
+
+function barba_open() {
+        ?>
+		<div data-barba="container" data-barba-namespace="home">
+	<?php
+}
+//Schedule Above Footer
+add_action('genesis_after', 'barba_close');
+
+function barba_close() {
+        ?>
+		</div>
+	<?php
+}

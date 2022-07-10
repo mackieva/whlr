@@ -76,7 +76,7 @@ function kreativ_front_page_widgets() {
 						<li class="splide__slide">
 								<div class="row">
 									<div class="col-md-6 splide__slide--imgContainer">
-										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Explore Properties - Village of Martinsville" class="laxx">
+										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/img-demo.jpg" alt="Explore Properties - Village of Martinsville" class="laxx">
 										<div class="imgPlaceholder"></div>
 									</div>
 									<div class="col-md-6 d-flex justify-content-center align-items-center">
@@ -112,7 +112,7 @@ function kreativ_front_page_widgets() {
 						<li class="splide__slide">
 								<div class="row">
 									<div class="col-md-6 splide__slide--imgContainer"">
-										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/franklin-fillage.jpg" alt="Explore Properties - Franklin Village Shopping Center" class="laxx">
+										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/franklin-village.jpg" alt="Explore Properties - Franklin Village Shopping Center" class="laxx">
 										<div class="imgPlaceholder"></div>
 									</div>
 									<div class="col-md-6 d-flex justify-content-center align-items-center">

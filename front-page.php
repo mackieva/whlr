@@ -40,7 +40,7 @@ function kreativ_front_page_widgets() {
 	?>
     <div class="homeSection__container" data-scroll-container>
 		<!-- WHLR AN REIT -->
-		<section class="homeSection" data-scroll-section>
+		<section class="homeSection homeSection--first " data-scroll-section>
 			<div class="row">
 				<div class="col-md-6 d-flex justify-content-center align-items-center">
 					<div class="homeSection__icContent" data-scroll>
@@ -72,7 +72,6 @@ function kreativ_front_page_widgets() {
 				<div class="splide__track">
 					<ul class="splide__list">
 						<li class="splide__slide">
-							<section class="homeSection" data-scroll-section>
 								<div class="row">
 									<div class="col-md-6">
 										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx">
@@ -88,10 +87,8 @@ function kreativ_front_page_widgets() {
 										</div>
 									</div>
 								</div>
-							</section>
 						</li>
 						<li class="splide__slide">
-							<section class="homeSection" data-scroll-section>
 								<div class="row">
 									<div class="col-md-6">
 										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx">
@@ -107,10 +104,8 @@ function kreativ_front_page_widgets() {
 										</div>
 									</div>
 								</div>
-							</section>
 						</li>
 						<li class="splide__slide">
-							<section class="homeSection" data-scroll-section>
 								<div class="row">
 									<div class="col-md-6">
 										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx">
@@ -126,7 +121,6 @@ function kreativ_front_page_widgets() {
 										</div>
 									</div>
 								</div>
-							</section>
 						</li>
 					</ul>
 					<div class="splide__arrows"></div>
@@ -191,17 +185,17 @@ function kreativ_front_page_widgets() {
 			</div>
 		</section>
 		<!-- METRICS -->
-		<section class="homeSection metrics" data-scroll-section data-scroll-position="top">
+		<section class="homeSection metrics" data-scroll-section>
 			<div class="row">
-				<div class="col-md-4" data-scroll data-scroll-speed="-20">
+				<div class="col-md-4" data-scroll data-scroll-speed="10" data-scroll-position="top" data-scroll-delay="0.05">
 					<p class="bodyXLrgCopy">76</p>
 					<p class="bodySubCopy">Shopping Centers</p>
 				</div>
-				<div class="col-md-4 borders" data-scroll data-scroll-speed="10">
+				<div class="col-md-4 borders" data-scroll data-scroll-speed="6" data-scroll-position="top" data-scroll-delay="0.05">
 					<p class="bodyXLrgCopy">8 Million+</p>
 					<p class="bodySubCopy">Square Feet</p>
 				</div>
-				<div class="col-md-4" data-scroll data-scroll-speed="-5">
+				<div class="col-md-4" data-scroll data-scroll-speed="2" data-scroll-position="top" data-scroll-delay="0.05">
 					<p class="bodyXLrgCopy">14</p>
 					<p class="bodySubCopy">States</p>
 				</div>
@@ -271,7 +265,7 @@ function kreativ_front_page_widgets() {
 			} ).mount();
 			new Splide( '#splideFeatured', {
 				autoplay: 'true',
-				type: 'fade',
+				type: 'loop',
 				perPage: 1,
                 perMove: 1,
 				pagination:false,

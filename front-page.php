@@ -10,10 +10,10 @@ function kreativ_front_page_init() {
 		// Enqueue scripts.
 		add_action( 'wp_enqueue_scripts', 'kreativ_home_scripts' );
 		function kreativ_home_scripts() {
+			wp_enqueue_style( 'jarallax-front-css', get_stylesheet_directory_uri() . '/css/jarallax.css' );
 			wp_enqueue_style( 'loco-front-css', get_stylesheet_directory_uri() . '/css/locomotive-scroll.css' );
 			wp_enqueue_style( 'splide-front-css', get_stylesheet_directory_uri() . '/css/splide.min.css' );
 			wp_enqueue_style( 'whlr-front-css', get_stylesheet_directory_uri() . '/css/style-front.css' );
-			wp_enqueue_script( 'plax-js', get_stylesheet_directory_uri() . '/js/simpleParallax.min.js');
 			wp_enqueue_script( 'loco-js-home', get_stylesheet_directory_uri() . '/js/locomotive-scroll.min.js');
 			wp_enqueue_script( 'splide-js-home', get_stylesheet_directory_uri() . '/js/splide.min.js');
 		}
@@ -42,7 +42,7 @@ function kreativ_front_page_widgets() {
 		<!-- <div class="cursor-dot"></div>
 		<div class="cursor-dot-outline"></div> -->
 		<!-- WHLR AN REIT -->
-		<section class="homeSection homeSection--first " data-scroll-section>
+		<section class="homeSection homeSection--first" data-scroll-section>
 			<div class="row">
 				<div class="col-md-6 d-flex justify-content-center align-items-center">
 					<div class="homeSection__icContent" data-scroll>
@@ -54,9 +54,11 @@ function kreativ_front_page_widgets() {
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 homeSection__imgWrapper" data-scroll>
-					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx homeSection__img">
-					<div class="imgPlaceholder"></div>
+				<div class="col-md-6 homeSection__imgWrapper homeSection__imgWrapper--lrg" data-scroll>
+					<div data-jarallax class="jarallax">
+						<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="jarallax-img homeSection__img">
+						<div class="imgPlaceholder"></div>
+					</div>
 				</div>
 			</div>
 			<a
@@ -75,9 +77,11 @@ function kreativ_front_page_widgets() {
 					<ul class="splide__list">
 						<li class="splide__slide">
 								<div class="row">
-									<div class="col-md-6 splide__slide--imgContainer">
-										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/img-demo.jpg" alt="Explore Properties - Village of Martinsville" class="laxx">
-										<div class="imgPlaceholder"></div>
+									<div class="col-md-6 homeSection__imgWrapper homeSection__imgWrapper--lrg">
+										<div data-jarallax class="jarallax">
+											<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/img-demo.jpg"" alt="Explore Properties" class="jarallax-img homeSection__img">
+											<div class="imgPlaceholder"></div>
+										</div>
 									</div>
 									<div class="col-md-6 d-flex justify-content-center align-items-center">
 										<div class="homeSection__icContent" data-scroll>
@@ -93,9 +97,11 @@ function kreativ_front_page_widgets() {
 						</li>
 						<li class="splide__slide">
 								<div class="row">
-									<div class="col-md-6 splide__slide--imgContainer"">
-										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/ft-howard.jpg" alt="Explore Properties - t. Howard Square" class="laxx">
-										<div class="imgPlaceholder"></div>
+									<div class="col-md-6 homeSection__imgWrapper homeSection__imgWrapper--lrg">
+										<div data-jarallax class="jarallax">
+											<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/ft-howard.jpg"" alt="Explore Propertiess - Ft. Howard" class="jarallax-img homeSection__img">
+											<div class="imgPlaceholder"></div>
+										</div>
 									</div>
 									<div class="col-md-6 d-flex justify-content-center align-items-center">
 										<div class="homeSection__icContent" data-scroll>
@@ -111,9 +117,11 @@ function kreativ_front_page_widgets() {
 						</li>
 						<li class="splide__slide">
 								<div class="row">
-									<div class="col-md-6 splide__slide--imgContainer"">
-										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/franklin-village.jpg" alt="Explore Properties - Franklin Village Shopping Center" class="laxx">
-										<div class="imgPlaceholder"></div>
+									<div class="col-md-6 homeSection__imgWrapper homeSection__imgWrapper--lrg">
+										<div data-jarallax class="jarallax">
+											<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/franklin-village.jpg"" alt="Explore Propertiess - Franklin Village Shopping Center" class="jarallax-img homeSection__img">
+											<div class="imgPlaceholder"></div>
+										</div>
 									</div>
 									<div class="col-md-6 d-flex justify-content-center align-items-center">
 										<div class="homeSection__icContent" data-scroll>
@@ -209,9 +217,11 @@ function kreativ_front_page_widgets() {
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 homeSection__imgWrapper" data-scroll>
-					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo-2.jpg" alt="Eplore Properties" class="laxx homeSection__img">
-					<div class="imgPlaceholder"></div>
+				<div class="col-md-6 homeSection__imgWrapper homeSection__imgWrapper--xlrg" data-scroll>
+					<div class="jarallax">
+						<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo-2.jpg" alt="Eplore Properties" class="jarallax-img homeSection__img">
+						<div class="imgPlaceholder"></div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -231,8 +241,8 @@ function kreativ_front_page_widgets() {
 					<p class="bodySubCopy">States</p>
 				</div>
 			</div>
-			<div class="row flex justify-content-center pt-5 statBtn">
-				<div class="col-md-4">
+			<div class="row flex justify-content-center pt-5" data-scroll>
+				<div class="col-md-4 statBtn">
 					<a href="#" class="btn--whlr">View Our Leasing Summary</a>
 				</div>
 			</div>
@@ -240,9 +250,11 @@ function kreativ_front_page_widgets() {
 		<!-- INVESTOR INFORMATION -->
 		<section class="homeSection" data-scroll-section>
 			<div class="row">
-				<div class="col-md-6 homeSection__imgWrapper" data-scroll>
-					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo-3.jpg" alt="Eplore Properties" class="laxx homeSection__img">
-					<div class="imgPlaceholder"></div>
+				<div class="col-md-6 homeSection__imgWrapper homeSection__imgWrapper--xlrg" data-scroll>
+					<div class="jarallax">
+						<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo-3.jpg" alt="Eplore Properties" class="jarallax-img homeSection__img">
+						<div class="imgPlaceholder"></div>
+					</div>
 				</div>
 				<div class="col-md-6 d-flex justify-content-center align-items-center">
 					<div class="homeSection__icContent" data-scroll>
@@ -282,7 +294,9 @@ function kreativ_front_page_widgets() {
 	<script>
 		document.addEventListener( 'DOMContentLoaded', function() {
 			var images = document.querySelectorAll('.laxx');
-			new simpleParallax(images);
+			jarallax(document.querySelectorAll('.jarallax'), {
+			
+			});
 			var scroll = new LocomotiveScroll();
 			new Splide( '#splidePartners', {
 				autoplay: 'true',

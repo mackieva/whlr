@@ -13,7 +13,7 @@ function kreativ_front_page_init() {
 			wp_enqueue_style( 'loco-front-css', get_stylesheet_directory_uri() . '/css/locomotive-scroll.css' );
 			wp_enqueue_style( 'splide-front-css', get_stylesheet_directory_uri() . '/css/splide.min.css' );
 			wp_enqueue_style( 'whlr-front-css', get_stylesheet_directory_uri() . '/css/style-front.css' );
-			wp_enqueue_script( 'plax-js', 'https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js');
+			wp_enqueue_script( 'plax-js', get_stylesheet_directory_uri() . '/js/simpleParallax.min.js');
 			wp_enqueue_script( 'loco-js-home', get_stylesheet_directory_uri() . '/js/locomotive-scroll.min.js');
 			wp_enqueue_script( 'splide-js-home', get_stylesheet_directory_uri() . '/js/splide.min.js');
 		}
@@ -39,22 +39,24 @@ function kreativ_front_page_init() {
 function kreativ_front_page_widgets() {
 	?>
     <div class="homeSection__container" data-scroll-container>
+		<!-- <div class="cursor-dot"></div>
+		<div class="cursor-dot-outline"></div> -->
 		<!-- WHLR AN REIT -->
-		<section class="homeSection" data-scroll-section>
-			<div class="homeSection__ic homeSection__ic--right" data-scroll>
-				<div class="homeSection__icImg">
-					<div class="homeSection__icImgWrapper" data-scroll-call="dynamicBackground" data-scroll-repeat>
-						<div class="image" style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
-						<div class="imagePlaceholder"></div>
+		<section class="homeSection homeSection--first " data-scroll-section>
+			<div class="row">
+				<div class="col-md-6 d-flex justify-content-center align-items-center">
+					<div class="homeSection__icContent" data-scroll>
+						<p class="homeSection__isContentSubTitle">Explore Properties</p>
+						<h3 class="homeSection__isContentTitle">An Industry Leading REIT</h3>
+						<p class="homeSection__isContentText">WHLR is a real estate investment trust that owns a portfolio of grocery-anchored shopping centers in secondary and tertiary markets from Florida to Massachusetts, totaling over approximately eight million square feet.</p>
+						<div class="homeSection__isContentBtn">
+							<a href="#" class="btn--whlr pelement">View All Properties</a>
+						</div>
 					</div>
 				</div>
-				<div class="homeSection__icContent" data-scroll-sticky>
-					<p class="homeSection__isContentSubTitle">Explore Properties</p>
-					<h3 class="homeSection__isContentTitle">An Industry Leading REIT</h3>
-					<p class="homeSection__isContentText">WHLR is a real estate investment trust that owns a portfolio of grocery-anchored shopping centers in secondary and tertiary markets from Florida to Massachusetts, totaling over approximately eight million square feet.</p>
-					<div class="homeSection__isContentBtn">
-						<a href="#" class="btn--whlr pelement">View All Properties</a>
-					</div>
+				<div class="col-md-6 homeSection__imgWrapper" data-scroll>
+					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx homeSection__img">
+					<div class="imgPlaceholder"></div>
 				</div>
 			</div>
 			<a
@@ -72,64 +74,58 @@ function kreativ_front_page_widgets() {
 				<div class="splide__track">
 					<ul class="splide__list">
 						<li class="splide__slide">
-							<section class="homeSection" data-scroll-section>
-								<div class="homeSection__ic homeSection__ic--left" data-scroll data-scroll-speed="-8" data-scroll-position="top" data-scroll-repeat>
-									<div class="homeSection__icImg">
-										<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
-											<div class="imagePlaceholder"></div>
-										</div>
+								<div class="row">
+									<div class="col-md-6 splide__slide--imgContainer">
+										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/img-demo.jpg" alt="Explore Properties - Village of Martinsville" class="laxx">
+										<div class="imgPlaceholder"></div>
 									</div>
-									<div class="homeSection__icContent" data-scroll-sticky>
-										<p class="homeSection__isContentSubTitle">Featured Property</p>
-										<h3 class="homeSection__isContentTitle">Village of Martinsville</h3>
-										<p class="homeSection__isContentText">WHLR is a real estate investment trust that owns a portfolio of grocery-anchored shopping centers in secondary and tertiary markets from Florida to Massachusetts, totaling over approximately eight million square feet.</p>
-										<div class="homeSection__isContentBtn">
-											<a href="#" class="btn--whlr pelement">Leasing Application</a><a href="#" class="btn--whlr btn--whlrAlt pelement">Property Details</a>
+									<div class="col-md-6 d-flex justify-content-center align-items-center">
+										<div class="homeSection__icContent" data-scroll>
+											<p class="homeSection__isContentSubTitle">Featured Property</p>
+											<h3 class="homeSection__isContentTitle">Village of Martinsville</h3>
+											<p class="homeSection__isContentText">WHLR is a real estate investment trust that owns a portfolio of grocery-anchored shopping centers in secondary and tertiary markets from Florida to Massachusetts, totaling over approximately eight million square feet.</p>
+											<div class="homeSection__isContentBtn">
+												<a href="#" class="btn--whlr pelement">Leasing Application</a><a href="#" class="btn--whlr btn--whlrAlt pelement">Property Details</a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</section>
 						</li>
 						<li class="splide__slide">
-							<section class="homeSection" data-scroll-section>
-								<div class="homeSection__ic homeSection__ic--left" data-scroll>
-									<div class="homeSection__icImg">
-										<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
-											<div class="imagePlaceholder"></div>
-										</div>
+								<div class="row">
+									<div class="col-md-6 splide__slide--imgContainer"">
+										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/ft-howard.jpg" alt="Explore Properties - t. Howard Square" class="laxx">
+										<div class="imgPlaceholder"></div>
 									</div>
-									<div class="homeSection__icContent" data-scroll-sticky>
-										<p class="homeSection__isContentSubTitle">Featured Property</p>
-										<h3 class="homeSection__isContentTitle">Ft. Howard Square</h3>
-										<p class="homeSection__isContentText">Located in one of Savannah's fastest growing submarkets, this fully-leased center is anchored by a number of large national tenants - Harbor Freight Tools, Goodwill, and Bealls Outlet.</p>
-										<div class="homeSection__isContentBtn">
-											<a href="#" class="btn--whlr pelement">Leasing Application</a><a href="#" class="btn--whlr btn--whlrAlt pelement">Property Details</a>
+									<div class="col-md-6 d-flex justify-content-center align-items-center">
+										<div class="homeSection__icContent" data-scroll>
+											<p class="homeSection__isContentSubTitle">Featured Property</p>
+											<h3 class="homeSection__isContentTitle">Ft. Howard Square</h3>
+											<p class="homeSection__isContentText">Located in one of Savannah's fastest growing submarkets, this fully-leased center is anchored by a number of large national tenants - Harbor Freight Tools, Goodwill, and Bealls Outlet.</p>
+											<div class="homeSection__isContentBtn">
+												<a href="#" class="btn--whlr pelement">Leasing Application</a><a href="#" class="btn--whlr btn--whlrAlt pelement">Property Details</a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</section>
 						</li>
 						<li class="splide__slide">
-							<section class="homeSection" data-scroll-section>
-								<div class="homeSection__ic homeSection__ic--left" data-scroll>
-									<div class="homeSection__icImg">
-										<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-											<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
-											<div class="imagePlaceholder"></div>
-										</div>
+								<div class="row">
+									<div class="col-md-6 splide__slide--imgContainer"">
+										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/franklin-village.jpg" alt="Explore Properties - Franklin Village Shopping Center" class="laxx">
+										<div class="imgPlaceholder"></div>
 									</div>
-									<div class="homeSection__icContent" data-scroll-sticky>
-										<p class="homeSection__isContentSubTitle">Featured Property</p>
-										<h3 class="homeSection__isContentTitle">Franklin Village Shopping Center</h3>
-										<p class="homeSection__isContentText">As one of several fully leased centers in WHLR's portfolio, a 1/2 mile from Armstrong County Memorial Hospital, the area's largest employer.</p>
-										<div class="homeSection__isContentBtn">
-											<a href="#" class="btn--whlr pelement">Leasing Application</a><a href="#" class="btn--whlr btn--whlrAlt pelement">Property Details</a>
+									<div class="col-md-6 d-flex justify-content-center align-items-center">
+										<div class="homeSection__icContent" data-scroll>
+											<p class="homeSection__isContentSubTitle">Featured Property</p>
+											<h3 class="homeSection__isContentTitle">Franklin Village Shopping Center</h3>
+											<p class="homeSection__isContentText">As one of several fully leased centers in WHLR's portfolio, a 1/2 mile from Armstrong County Memorial Hospital, the area's largest employer.</p>
+											<div class="homeSection__isContentBtn">
+												<a href="#" class="btn--whlr pelement">Leasing Application</a><a href="#" class="btn--whlr btn--whlrAlt pelement">Property Details</a>
+											</div>
 										</div>
 									</div>
 								</div>
-							</section>
 						</li>
 					</ul>
 					<div class="splide__arrows"></div>
@@ -138,79 +134,104 @@ function kreativ_front_page_widgets() {
 		</section>
 		<!-- EXPLORE REGION ACCORDION -->
 		<section class="homeSection" data-scroll-section>
-			<div class="homeSection__ic homeSection__ic--right" data-scroll  data-scroll-delay="4.5">
-				<div class="homeSection__icImg">
-					<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat data-scroll-delay="4.5">
-						<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
-						<div class="imagePlaceholder"></div>
+			<div class="row">
+				<div class="col-md-6 d-flex justify-content-center align-items-center">
+					<div class="homeSection__icContent" data-scroll>
+						<p class="homeSection__isContentSubTitle">Explore Regions</p>
+						<div class="accordion accordion-flush" id="accordionRegionExplore">
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="flush-headingOne">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+									North East
+								</button>
+								</h2>
+								<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="North East" data-bs-parent="#accordionRegionExplore">
+									<div class="accordion-body explore-region-body">
+										<div class="row">
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Maryland <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">New Jersey <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Pennsylvania <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Connecticut <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Massachusets <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="flush-headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+									Mid-Atlantic
+								</button>
+								</h2>
+								<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="Mid-Atlantic" data-bs-parent="#accordionRegionExplore">
+									<div class="accordion-body explore-region-body">
+										<div class="row">
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Kentucky <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Tennessee <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">North Carolina <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Virginia <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">West Virginia <i role="img" aria-label="GitHub" class="bi-geo-alt-fill"></i></a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="flush-headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+									South East
+								</button>
+								</h2>
+								<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="South East" data-bs-parent="#accordionRegionExplore">
+									<div class="accordion-body explore-region-body">
+										<div class="row">
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Alabama <i role="img" aria-label="Alabama" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Georgia <i role="img" aria-label="Georgia" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">North Carolina <i role="img" aria-label="North Carolina" class="bi-geo-alt-fill"></i></a></div>
+											<div class="col-sm-6"><a href="#" class="btn--whlr">South Carolina <i role="img" aria-label="South Carolina" class="bi-geo-alt-fill"></i></a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="flush-headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+									Mid-West
+								</button>
+								</h2>
+								<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="Mid-West" data-bs-parent="#accordionRegionExplore">
+									<div class="accordion-body explore-region-body">
+										<div class="row">
+											<div class="col-sm-6"><a href="#" class="btn--whlr">Oklahoma <i role="img" aria-label="Oklahoma" class="bi-geo-alt-fill"></i></a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="homeSection__icContent" data-scroll-sticky>
-					<p class="homeSection__isContentSubTitle">Eplore Regions</p>
-					<div class="accordion accordion-flush" id="accordionRegionExplore">
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="flush-headingOne">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-								North East
-							</button>
-							</h2>
-							<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="North East" data-bs-parent="#accordionRegionExplore">
-							<div class="accordion-body">
-								<a href="#" class="bth--whlr">Kentucky</a><a href="#" class="bth--whlr">Tennessee</a><a href="#" class="bth--whlr">North Carolina</a><a href="#" class="bth--whlr">Virginia</a><a href="#" class="bth--whlr">West Virginia</a>
-							</div>
-							</div>
-						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="flush-headingTwo">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-								Mid-Atlantic
-							</button>
-							</h2>
-							<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="Mid-Atlantic" data-bs-parent="#accordionRegionExplore">
-							<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-							</div>
-						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="flush-headingThree">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-								South East
-							</button>
-							</h2>
-							<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="South East" data-bs-parent="#accordionRegionExplore">
-							<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-							</div>
-						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="flush-headingThree">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-								Mid-West
-							</button>
-							</h2>
-							<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="Mid-West" data-bs-parent="#accordionRegionExplore">
-							<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-							</div>
-						</div>
-					</div>
+				<div class="col-md-6 homeSection__imgWrapper" data-scroll>
+					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo-2.jpg" alt="Eplore Properties" class="laxx homeSection__img">
+					<div class="imgPlaceholder"></div>
 				</div>
 			</div>
 		</section>
 		<!-- METRICS -->
-		<section class="homeSection metrics" data-scroll-section data-scroll-position="top">
-			<div class="row">
-				<div class="col-md-4" data-scroll data-scroll-speed="-20">
+		<section class="homeSection metrics" data-scroll-section>
+			<div class="row" data-scroll>
+				<div class="col-md-4 firstStat">
 					<p class="bodyXLrgCopy">76</p>
 					<p class="bodySubCopy">Shopping Centers</p>
 				</div>
-				<div class="col-md-4 borders" data-scroll data-scroll-speed="10">
+				<div class="col-md-4 borders secondStat">
 					<p class="bodyXLrgCopy">8 Million+</p>
 					<p class="bodySubCopy">Square Feet</p>
 				</div>
-				<div class="col-md-4" data-scroll data-scroll-speed="-5">
+				<div class="col-md-4 thirdStat">
 					<p class="bodyXLrgCopy">14</p>
 					<p class="bodySubCopy">States</p>
 				</div>
 			</div>
-			<div class="row flex justify-content-center pt-5">
+			<div class="row flex justify-content-center pt-5 statBtn">
 				<div class="col-md-4">
 					<a href="#" class="btn--whlr">View Our Leasing Summary</a>
 				</div>
@@ -218,19 +239,19 @@ function kreativ_front_page_widgets() {
 		</section>
 		<!-- INVESTOR INFORMATION -->
 		<section class="homeSection" data-scroll-section>
-			<div class="homeSection__ic homeSection__ic--left" data-scroll>
-				<div class="homeSection__icImg">
-					<div class="homeSection__icImgWrapper" data-scroll data-scroll-call="dynamicBackground" data-scroll-repeat>
-						<div class="image" data-scroll style="background-image:url(<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg);"></div>
-						<div class="imagePlaceholder"></div>
-					</div>
+			<div class="row">
+				<div class="col-md-6 homeSection__imgWrapper" data-scroll>
+					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo-3.jpg" alt="Eplore Properties" class="laxx homeSection__img">
+					<div class="imgPlaceholder"></div>
 				</div>
-				<div class="homeSection__icContent" data-scroll-sticky>
-					<p class="homeSection__isContentSubTitle">investor information</p>
-					<h3 class="homeSection__isContentTitle">Your Success Is Our Mission</h3>
-					<p class="homeSection__isContentText">We believe in driving profitability for not only our tenants, but for our current and future investors. We carefully analyze markets, tenant-to-tenant relations, and strategic partnerships so that we can directly influence the success of our entire portfolio. </p>
-					<div class="homeSection__isContentBtn">
-						<a href="#" class="btn--whlr pelement">View Investor Information</a>
+				<div class="col-md-6 d-flex justify-content-center align-items-center">
+					<div class="homeSection__icContent" data-scroll>
+						<p class="homeSection__isContentSubTitle">Investor Information</p>
+						<h3 class="homeSection__isContentTitle">Your Success Is Our Mission</h3>
+						<p class="homeSection__isContentText">We believe in driving profitability for not only our tenants, but for our current and future investors. We carefully analyze markets, tenant-to-tenant relations, and strategic partnerships so that we can directly influence the success of our entire portfolio. </p>
+						<div class="homeSection__isContentBtn">
+							<a href="#" class="btn--whlr pelement">View Investor Information</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -260,6 +281,8 @@ function kreativ_front_page_widgets() {
 	</div>
 	<script>
 		document.addEventListener( 'DOMContentLoaded', function() {
+			var images = document.querySelectorAll('.laxx');
+			new simpleParallax(images);
 			var scroll = new LocomotiveScroll();
 			new Splide( '#splidePartners', {
 				autoplay: 'true',

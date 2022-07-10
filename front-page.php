@@ -53,7 +53,7 @@ function kreativ_front_page_widgets() {
 					</div>
 				</div>
 				<div class="col-md-6 homeSection__imgWrapper">
-					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx">
+					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx homeSection__img">
 					<div class="imgPlaceholder"></div>
 				</div>
 			</div>
@@ -73,8 +73,9 @@ function kreativ_front_page_widgets() {
 					<ul class="splide__list">
 						<li class="splide__slide">
 								<div class="row">
-									<div class="col-md-6">
+									<div class="col-md-6 splide__slide--imgContainer">
 										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx">
+										<div class="imgPlaceholder"></div>
 									</div>
 									<div class="col-md-6 d-flex justify-content-center align-items-center">
 										<div class="homeSection__icContent" data-scroll>
@@ -90,8 +91,9 @@ function kreativ_front_page_widgets() {
 						</li>
 						<li class="splide__slide">
 								<div class="row">
-									<div class="col-md-6">
+									<div class="col-md-6 splide__slide--imgContainer"">
 										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx">
+										<div class="imgPlaceholder"></div>
 									</div>
 									<div class="col-md-6 d-flex justify-content-center align-items-center">
 										<div class="homeSection__icContent" data-scroll>
@@ -107,8 +109,9 @@ function kreativ_front_page_widgets() {
 						</li>
 						<li class="splide__slide">
 								<div class="row">
-									<div class="col-md-6">
+									<div class="col-md-6 splide__slide--imgContainer"">
 										<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx">
+										<div class="imgPlaceholder"></div>
 									</div>
 									<div class="col-md-6 d-flex justify-content-center align-items-center">
 										<div class="homeSection__icContent" data-scroll>
@@ -180,7 +183,8 @@ function kreativ_front_page_widgets() {
 					</div>
 				</div>
 				<div class="col-md-6">
-					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx" data-scroll>
+					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx homeSection__img">
+					<div class="imgPlaceholder"></div>
 				</div>
 			</div>
 		</section>
@@ -209,8 +213,9 @@ function kreativ_front_page_widgets() {
 		<!-- INVESTOR INFORMATION -->
 		<section class="homeSection" data-scroll-section>
 			<div class="row">
-				<div class="col-md-6">
-					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx" data-scroll>
+				<div class="col-md-6 homeSection__imgWrapper" data-scroll>
+					<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo.jpg" alt="Eplore Properties" class="laxx homeSection__img">
+					<div class="imgPlaceholder"></div>
 				</div>
 				<div class="col-md-6 d-flex justify-content-center align-items-center">
 					<div class="homeSection__icContent" data-scroll>
@@ -265,7 +270,7 @@ function kreativ_front_page_widgets() {
 			} ).mount();
 			new Splide( '#splideFeatured', {
 				autoplay: 'true',
-				type: 'loop',
+				type: 'fade',
 				perPage: 1,
                 perMove: 1,
 				pagination:false,

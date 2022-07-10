@@ -38,7 +38,7 @@ function kreativ_front_page_init() {
 // Add markup for front page widgets.
 function kreativ_front_page_widgets() {
 	?>
-    <div class="homeSection__container" data-scroll-container>
+    <div class="homeSection__container">
 		<!-- <div class="cursor-dot"></div>
 		<div class="cursor-dot-outline"></div> -->
 		<!-- WHLR AN REIT -->
@@ -144,7 +144,7 @@ function kreativ_front_page_widgets() {
 		<section class="homeSection" data-scroll-section>
 			<div class="row">
 				<div class="col-md-6 d-flex justify-content-center align-items-center">
-					<div class="homeSection__icContent" data-scroll>
+					<div class="homeSection__icContent" data-scroll data-scroll-position="top" >
 						<p class="homeSection__isContentSubTitle">Explore Regions</p>
 						<div class="accordion accordion-flush" id="accordionRegionExplore">
 							<div class="accordion-item">
@@ -217,7 +217,7 @@ function kreativ_front_page_widgets() {
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 homeSection__imgWrapper homeSection__imgWrapper--xlrg" data-scroll>
+				<div class="col-md-6 homeSection__imgWrapper homeSection__imgWrapper--xlrg" data-scroll data-scroll-position="top" >
 					<div class="jarallax">
 						<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo-2.jpg" alt="Eplore Properties" class="jarallax-img homeSection__img">
 						<div class="imgPlaceholder"></div>
@@ -241,7 +241,7 @@ function kreativ_front_page_widgets() {
 					<p class="bodySubCopy">States</p>
 				</div>
 			</div>
-			<div class="row flex justify-content-center pt-5" data-scroll>
+			<div class="row flex justify-content-center pt-5" data-scroll data-scroll-position="top" >
 				<div class="col-md-4 statBtn">
 					<a href="#" class="btn--whlr">View Our Leasing Summary</a>
 				</div>
@@ -250,14 +250,14 @@ function kreativ_front_page_widgets() {
 		<!-- INVESTOR INFORMATION -->
 		<section class="homeSection" data-scroll-section>
 			<div class="row">
-				<div class="col-md-6 homeSection__imgWrapper homeSection__imgWrapper--xlrg" data-scroll>
+				<div class="col-md-6 homeSection__imgWrapper homeSection__imgWrapper--xlrg" data-scroll data-scroll-position="top" >
 					<div class="jarallax">
 						<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/themes/genesis-sample/images/img-demo-3.jpg" alt="Eplore Properties" class="jarallax-img homeSection__img">
 						<div class="imgPlaceholder"></div>
 					</div>
 				</div>
 				<div class="col-md-6 d-flex justify-content-center align-items-center">
-					<div class="homeSection__icContent" data-scroll>
+					<div class="homeSection__icContent" data-scroll data-scroll-position="top">
 						<p class="homeSection__isContentSubTitle">Investor Information</p>
 						<h3 class="homeSection__isContentTitle">Your Success Is Our Mission</h3>
 						<p class="homeSection__isContentText">We believe in driving profitability for not only our tenants, but for our current and future investors. We carefully analyze markets, tenant-to-tenant relations, and strategic partnerships so that we can directly influence the success of our entire portfolio. </p>
@@ -269,9 +269,9 @@ function kreativ_front_page_widgets() {
 			</div>
 		</section>
 		<!-- PARTNERS -->
-		<section class="homeSection">
-			<h3 class="bodyLrgCopy text-center mb-5">Partners</h3>
-			<div class="splide" id="splidePartners" role="group">
+		<section class="homeSection" data-scroll-section>
+			<h3 class="bodyLrgCopy text-center mb-5" data-scroll data-scroll-position="top">Partners</h3>
+			<div class="splide" id="splidePartners" role="group" data-scroll data-scroll-position="top" >
 				<div class="splide__track">
 					<ul class="splide__list">
 						<li class="splide__slide"><img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/big-lots.png" alt="Big Lots" class="aligncenter"></li>
@@ -293,11 +293,9 @@ function kreativ_front_page_widgets() {
 	</div>
 	<script>
 		document.addEventListener( 'DOMContentLoaded', function() {
-			var images = document.querySelectorAll('.laxx');
 			jarallax(document.querySelectorAll('.jarallax'), {
 			
 			});
-			var scroll = new LocomotiveScroll();
 			new Splide( '#splidePartners', {
 				autoplay: 'true',
 				type: 'loop',
@@ -318,6 +316,9 @@ function kreativ_front_page_widgets() {
 				lazyLoad:'nearby',
 			} ).mount();
 		} );
+		const scroll = new LocomotiveScroll({
+			smooth: true
+		});
 	</script>
 	<?php
 

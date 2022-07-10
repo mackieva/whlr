@@ -20,7 +20,7 @@ wp_head(); // We need this for plugins.
 </head>
 <?php
 genesis_markup( array(
-	'open'   => '<body %s data-barba="wrapper">',
+	'open'   => '<body %s data-scroll-container>',
 	'context' => 'body',
 ) );
 do_action( 'genesis_before' );

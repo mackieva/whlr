@@ -269,3 +269,17 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+add_filter( 'genesis_attr_site-header', 'whlr_scroll_header_data' );
+function whlr_scroll_header_data( $attributes ) {
+ 
+ $attributes['data-scroll-section'] = ' ';
+ return $attributes;
+}
+
+add_filter( 'genesis_attr_footer-widgets', 'whlr_scroll_footer_data' );
+function whlr_scroll_footer_data( $attributes ) {
+ 
+ $attributes['data-scroll-section'] = ' ';
+ return $attributes;
+}

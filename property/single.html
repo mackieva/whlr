@@ -1,0 +1,574 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>WHLR Real Estate Listing - Property Detail Page</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://whlr.us/propcapsule/css/normalize.css">
+  <link rel="stylesheet" href="https://whlr.us/propcapsule/css/splide/splide.min.css">
+  <link rel="stylesheet" href="https://whlr.us/propcapsule/css/splide/themes/splide-sea-green.min.css">
+  <link href="https://whlr.us/propcapsule/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://whlr.us/propcapsule/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto&display=swap" rel="stylesheet"> 
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <header class="mainHeader">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a href="#" class=""><img src="img/whlr-logo.png" alt="Wheeler Real Estate Inestement Trust"  class="navbar-brand logo"></a>
+        <button class="navbar-toggler" type="btn--whlr" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+          <div class="offcanvas-header">
+            <button type="btn--whlr" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Team</a></li>
+                  <li><a class="dropdown-item" href="#">Careers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Properties
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Acquisitions</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Investors
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Cedar IR</a></li>
+                  <li><a class="dropdown-item" href="#">Wheeler IR</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tenants</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- DETAILS - NAME, DOC DOWNLOAD BUTTONS, INFO, CONTACTS -->
+  <section class="top-info-section container-fluid p-md-5 p-2" style="background:url(img/whlr-ex.jpg) no-repeat center center;">
+    <div class="top-info-section__bg"></div>
+    <div class="top-info-section__content row mb-2">
+      <div class="col-md-5">
+        <h2 class="mb-2">Village of Martinsville</h2>
+        <p class="tis__copyLight tis__address text-uppercase mb-3">240 W Commonwealth Blvd<br/>Martinsville, VA 24112</p>
+        <div class="d-flex flex-column top-info-section__btn-list">
+          <button class="btn--whlr btn-lg w-75 my-2" href="#">Leasing Brochure</button>
+          <button class="btn--whlr btn-lg w-75 my-2" href="#">Demographics</button>
+          <button class="btn--whlr btn-lg w-75 my-2" href="#">Competition Aerial</button>
+          <button class="btn--whlr btn-lg w-75 my-2" href="#">Visit Consumer Site</button>
+        </div>
+      </div>
+      <div class="col-md-7">
+          <div class="row mb-2">
+            <div class="col">
+              <h3 class="tis__heading tis__headingLrg">Key Tenants</h3>
+              <p class="tis__copyBold">Kroger</p>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-sm-4">
+              <h3 class="tis__heading tis__headingLrg">Owned GLA</h3>
+              <p class="tis__copyBold">290,902</p>
+            </div>
+            <div class="col-sm-4">
+              <h3 class="tis__heading tis__headingLrg">Population  (3 MI)</h3>
+              <p class="tis__copyBold">20,003</p>
+            </div>
+            <div class="col-sm-4">
+              <h3 class="tis__heading tis__headingLrg">Avg. Income  (3 MI)</h3>
+              <p class="tis__copyBold">$50,675</p>
+            </div>
+          </div>
+          <hr>
+          <div class="row mb-2">
+            <div class="col">
+              <h3 class="tis__heading tis__headingLrg">Property Contacts</h3>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-sm-6 tis__contact">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="img/kevin-conway.jpg" alt="Kevin Conway" class="tis__headshot">
+                </div>
+                <div class="col-8">
+                  <p class="tis__copyBold">Leasing</p>
+                  <p class="tis__copyLight">Kevin Conway<br/>757-627-9088<br/><a href="mailto:kconway@whlr.us">kconway@whlr.us</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <img src="img/kimberly-long.jpg" alt="Kimberly Long" class="tis__headshot"></div>
+                <div class="col-8">
+                  <p class="tis__copyBold">Property Manager</p>
+                  <p class="tis__copyLight">Kimberly Long<br/>757-627-9088<br/><a href="mailto:klong@whlr.us">klong@whlr.us</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- FEATURED IMAGE | INTERACTIVE MAP -->
+  <section class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 p-0">
+            <img src="img/whlr-ex.jpg" alt="Property Name" class="img-fluid">
+        </div>
+        <div class="col-md-6 p-0">
+          <div id="pc-map" style="height:100%;">
+            <iframe style="width:100%;height:100%;" scrolling="no" id="bing3" name="bing" src="https://properties.shopcore.com/property/output/map/capsule/id:1669" width="100%" frameborder="0"></iframe>
+        </div>
+        </div>
+    </div>
+  </section>
+  <!-- SITE PLAN -->
+  <section class="container mt-5 pt-5">
+    <h3 class="text-center pb-1 section-title">Site Plan</h3>
+    <div class="property__site-plan__map">
+      <div id="property-site-plan" style="text-align: center;">
+        <img src="img/site-map-img.png" class="align-center">
+      </div>
+    </div>
+  </section>
+  <!-- TENANT LISTING -->
+  <section class="container-fluid tenantTable" style="background:url(img/whlr-ex.jpg) no-repeat center center;">
+    <div class="container my-5 py-5">
+      <h3 class="text-center pb-1 mb-0 section-title">Tenant Listing</h3>
+      <table class="dataTable propertyDetail" width="100%" cellspacing="0">
+          <thead>
+             <tr role="row">
+                <th class="vert-align sorting" tabindex="0" aria-controls="pc-property-list" rowspan="1" colspan="1" aria-label="Property">Suite #</th>
+                <th class="vert-align sorting" tabindex="0" aria-controls="pc-property-list" rowspan="1" colspan="1" aria-label="Tenant Name">Tenant Name</th>
+                <th class="vert-align sorting" tabindex="0" aria-controls="pc-property-list" rowspan="1" colspan="1" aria-label="Gla (SF)">GLA (SF)</th>
+             </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="1">
+                  1                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="1">
+                  Domino's Pizza                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="1">
+                  1,400 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="1A">
+                  1A                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="1A">
+                  Advance America                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="1A">
+                  1,400 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="2">
+                  2                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="2">
+                  Ronin Sushi                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="2">
+                  1,200 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="3">
+                  3                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="3">
+                  New China Restaurant                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="3">
+                  2,400 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="5">
+                  5                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="5">
+                  Subway                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="5">
+                  1,200 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="6">
+                  6                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="6">
+                  Charter Communications                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="6">
+                  4,675 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="7">
+                  7                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="7">
+                  Alex City Tobacco &amp; Vapor                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="7">
+                  3,600 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="9">
+                  9                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="9">
+                  Harbor Freight Tools                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="9">
+                  17,850 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="10">
+                  10                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="10">
+                  Regional Finance                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="10">
+                  1,200 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="11">
+                  11                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="11">
+                  A's Beauty Supply                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="11">
+                  3,095 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="11A">
+                  11A                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="11A">
+                  Modern Nails                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="11A">
+                  1,105 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="12">
+                  12                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="12">
+                  Credit Central                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="12">
+                  1,200 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="13">
+                  13                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="13">
+                  CATO                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="13">
+                  5,850 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="14">
+                  14                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="14">
+                  Verizon Wireless                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="14">
+                  2,800 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="15A">
+                  15A                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="15A">
+                  Hibbett Sports                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="15A">
+                  5,400 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="15B">
+                  15B                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="15B">
+                  Burkes Outlet                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="15B">
+                  28,000 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="15C">
+                  15C                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="15C">
+                  Planet Fitness                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="15C">
+                  13,500 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="15D">
+                  15D                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="15D">
+                  Dollar Tree                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="15D">
+                  8,300 SF
+               </td>
+            </tr>
+            <tr class="">
+               <td class="comAvailLeft highlightJS" data-spaceid="16">
+                  16                    
+               </td>
+               <td class="comAvailMid highlightJS" data-spaceid="16">
+                  Winn-Dixie                    
+               </td>
+               <td class="comAvailRight highlightJS" data-spaceid="16">
+                  47,668 SF
+               </td>
+            </tr>
+         </tbody>
+       </table>
+    </div>
+  </section>
+  <!-- IMAGE GALLERY -->
+  <section class="banner-section container my-5 py-5">
+    <div class="row">
+      <div class="col-md-3">
+        <section id="thumbnail-slider" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+            </ul>
+          </div>
+        </section>        
+      </div>
+      <div class="col-md-9">
+        <section id="main-slider" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="img/whlr-ex.jpg" alt="">
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </section>
+  <!-- NEAREST PROPERTIES - HEADING -->
+  <section class="container-fluid py-lg-4 nearest-header">
+    <h3 class="text-center">Nearest Shopping Center</h3>
+  </section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-3 col-lg-6 col-md-12 p-0">
+        <figure class="whlrNearestProp">
+          <img src="img/whlr-ex.jpg" alt="Property Name"/>
+          <figcaption>
+            <h2>Property Name</h2>
+            <p class="city">City Name, ST</p>
+            <a href="#" class="btn btn-link">Details -></a>
+            <button class="btn btn-link">Details -></button>
+          </figcaption>			
+        </figure>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-12 p-0">
+        <figure class="whlrNearestProp">
+          <img src="img/whlr-ex.jpg" alt="Property Name"/>
+          <figcaption>
+            <h2>Property Name</h2>
+            <p class="city">City Name, ST</p>
+            <a href="https://google.com" class="btn btn-link">Details -></a>
+            <button class="btn btn-link">Details -></button>
+          </figcaption>			
+        </figure>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-12 p-0">
+        <figure class="whlrNearestProp">
+          <img src="img/whlr-ex.jpg" alt="Property Name"/>
+          <figcaption>
+            <h2>Property Name</h2>
+            <p class="city">City Name, ST</p>
+            <a href="#" class="btn btn-link">Details -></a>
+            <button class="btn btn-link">Details -></button>
+          </figcaption>			
+        </figure>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-12 p-0">
+        <figure class="whlrNearestProp">
+          <img src="img/whlr-ex.jpg" alt="Property Name"/>
+          <figcaption>
+            <h2>Property Name</h2>
+            <p class="city">City Name, ST</p>
+            <a href="#" class="btn btn-link">Details -></a>
+            <button class="btn btn-link">Details -></button>
+          </figcaption>			
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="whlrFooter">
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <a href="/"><img src="img/whlr-logo-footer.png" alt="Wheeler Real Estate Inestement Trust"  class="navbar-brand logo"></a>
+            <p>&copy; 2022 WHLR. All rights reserved</p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2">
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2">
+          </div>
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <p>2529 Virginia Beach Blvd. <br>Virginia Beach, VA 23452</p>
+            <p>Phone: (757) 627-9088 <br>Fax: (757) 627-9081</p>
+            <p><a href="https://www.linkedin.com/company/wheeler-real-estate-investment-trust?trk=biz-companies-cym">Follow Us! <i class="bi-linkedin" aria-label="Visit WHLR LinkedIn"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <!-- NEAREST PROPERTIES - LIST -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script> -->
+  <script src="https://whlr.us/propcapsule/js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="https://whlr.us/propcapsule/js/plugins.js"></script>
+  <script src="https://whlr.us/propcapsule/js/main.js"></script>
+  <script src="https://whlr.us/propcapsule/js/vendor/splide.min.js"></script>
+  <script src="https://whlr.us/propcapsule/js/vendor/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      var main = new Splide( '#main-slider', {
+        type       : 'fade',
+        heightRatio: 0.5,
+        arrows     : false,
+        cover      : true,
+      } );
+
+      var thumbnails = new Splide( '#thumbnail-slider', {
+        rewind          : true,
+        isNavigation    : true,
+        direction: 'ttb',
+        width:300,
+        height:525,
+        focus : 'center',
+        gap:10,
+        arrows     : true,
+        cover           : true,  
+        pagination      : false,
+        perPage: 3,
+        dragMinThreshold: {
+          mouse: 4,
+          touch: 10,
+        },
+        breakpoints : {
+          640: {
+            fixedWidth  : 66,
+            fixedHeight : 38,
+          },
+        },
+      } );
+
+      main.sync( thumbnails );
+      main.mount();
+      thumbnails.mount();
+    } );
+  </script>
+</body>
+
+</html>

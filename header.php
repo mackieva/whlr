@@ -20,13 +20,13 @@ wp_head(); // We need this for plugins.
 </head>
 <?php
 genesis_markup( array(
-	'open'   => '<body %s data-scroll-container>',
+	'open'   => '<body %s>',
 	'context' => 'body',
 ) );
 do_action( 'genesis_before' );
 
 genesis_markup( array(
-	'open'   => '<div %s>',
+	'open'   => '<div %s data-scroll-container>',
 	'context' => 'site-container',
 ) );
 

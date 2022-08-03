@@ -57,9 +57,9 @@ function genesis_child_gutenberg_support() { // phpcs:ignore WordPress.NamingCon
 }
 
 // Registers the responsive menus.
-if ( function_exists( 'genesis_register_responsive_menus' ) ) {
-	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
-}
+// if ( function_exists( 'genesis_register_responsive_menus' ) ) {
+// 	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
+// }
 
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 /**
@@ -88,7 +88,8 @@ function genesis_sample_enqueue_scripts_styles() {
 			genesis_get_theme_version()
 		);
 	}
-
+	
+	wp_enqueue_script( 'kreativ-responsive-oc-menu', get_stylesheet_directory_uri() . '/js/off-canvas-menu.min.js', array( 'jquery' ), PARENT_THEME_VERSION, true );
 	wp_enqueue_style( 'bs-stylesheet', CHILD_URL . '/css/bootstrap.min.css', array(), PARENT_THEME_VERSION );
 
 
@@ -282,4 +283,115 @@ function whlr_scroll_footer_data( $attributes ) {
  
  $attributes['data-scroll-section'] = ' ';
  return $attributes;
+}
+
+// Add Page Header
+add_action( 'genesis_after_header', 'showcase_page_header', 8 );
+function showcase_page_header() {
+	$output = false;
+	if( is_page() || !is_home() || is_page('careers') || is_page('team') || !is_singular('post') ) {
+
+		$image = get_post_thumbnail_id();
+
+		if( $image ) {
+
+			$image = wp_get_attachment_image_src( $image, 'showcase_hero' );
+			$background_image_class = 'with-background-image';
+			$title = the_title( '<h2>', '</h2>', false );
+
+			$output .= '<div class="page-header with-background-image"><div class="wrap"><img src="'.$image[0].'" class="thumbnail" class="WHLR ' . $title . '">';
+			$output .= '</div></div><script src="'.get_stylesheet_directory_uri().'/js/simpleParallax.js"></script><script>var image = document.getElementsByClassName("thumbnail");
+new simpleParallax(image);</script>';
+		}
+	}
+
+	if( $output )
+		echo $output;
+}
+
+
+add_filter( 'body_class', 'showcase_page_header_body_class' );
+function showcase_page_header_body_class( $classes ) {
+
+	if( is_page() && has_post_thumbnail() )
+    	$classes[] = 'with-page-header';
+
+    return $classes;
+
+}
+
+function wp_trim_excerpt_modified($text, $content_length = 55, $remove_breaks = false) {
+    if ( '' != $text ) {
+        $text = strip_shortcodes( $text );
+        $text = excerpt_remove_blocks( $text );
+        $text = apply_filters( 'the_content', $text );
+        $text = str_replace(']]>', ']]&gt;', $text);
+        $num_words = $content_length;
+        $more = $excerpt_more ? $excerpt_more : null;
+        if ( null === $more ) {
+            $more = __( '&hellip;' );
+        }
+        $original_text = $text;
+        $text = preg_replace( '@<(script|style)[^>]*?>.*?</\\1>@si', '', $text );
+
+        // Here is our modification
+        // Allow <p> and <strong>
+        $text = strip_tags($text, '<p>,<strong>');
+
+        if ( $remove_breaks )
+            $text = preg_replace('/[\r\n\t ]+/', ' ', $text);
+        $text = trim( $text );
+        if ( strpos( _x( 'words', 'Word count type. Do not translate!' ), 'characters' ) === 0 && preg_match( '/^utf\-?8$/i', get_option( 'blog_charset' ) ) ) {
+            $text = trim( preg_replace( "/[\n\r\t ]+/", ' ', $text ), ' ' );
+            preg_match_all( '/./u', $text, $words_array );
+            $words_array = array_slice( $words_array[0], 0, $num_words + 1 );
+            $sep = '';
+        } else {
+            $words_array = preg_split( "/[\n\r\t ]+/", $text, $num_words + 1, PREG_SPLIT_NO_EMPTY );
+            $sep = ' ';
+        }
+        if ( count( $words_array ) > $num_words ) {
+            array_pop( $words_array );
+            $text = implode( $sep, $words_array );
+            $text = $text . $more;
+        } else {
+            $text = implode( $sep, $words_array );
+        }
+    }
+    return $text;
+}
+
+add_action('genesis_header', 'off_canvas_items', 10);
+function off_canvas_items() {
+	?>
+	<aside class="icon-open-row">
+		<div class="icon-open-container">
+			<div class="icon-open-col-1">
+				☰
+			</div>
+		</div>
+	</aside>
+	<div class="off-canvas">
+		<div class="off-canvas-header">
+			<img src="<?php echo get_bloginfo('wpurl') ?>/wp-content/uploads/wheeler-logo-test.png" class="custom-logo" alt="WHLR" width="150" height="61">
+		</div>
+		<div data-bs-dismiss="off-canvas" aria-label="Close">
+			<div class="icon-close"></div>
+		</div>
+
+		<div class="off-canvas-body">
+			<nav class="mobile-menu">
+			<?php wp_nav_menu( array( 
+			'theme_location' => 'primary', 
+			'menu_class' => 'menu genesis-nav-menu menu-primary'
+			) ); ?>
+			</nav>
+			<!-- <ul class="bh-links">
+				<li>
+					<a href="#">Like Us! <i class="bi-linkedin" aria-hidden="true"></i></a>
+				</li>
+			</ul> -->
+		</div>
+	</div>
+	<?php
 }

@@ -642,9 +642,15 @@
     opacity:0;
 }
 
+.whlrRegionMap a.regionSelect .whlrRegionMap__state {
+    fill:#fff;
+    stroke-width: 1px;
+    stroke: #003471;
+}
+
 .whlrRegionMap a:hover .whlrRegionMap__state,
 .whlrRegionMap a.active .whlrRegionMap__state {
-    fill:#fff;
+    fill:rgba(0,119,255,1);
     stroke:#003471;
     stroke-width: 2px;
 }
